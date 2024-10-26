@@ -3,15 +3,15 @@ import java.time.LocalDate;
 public class Person {
     private String name; //Nome
     private String surname; // Sobrenome
-
+    private String sex;
+    private double height;
+    private double weight;
     private String day; //Dia de nascimento
     private String month; //Mes de nascimento
     private String year; //Ano de nascimento
 
 
-    public Person(String name, String surname, String day, String month, String year) {
-        this.name = name;
-        this.surname = surname;
+    public Person(String name, String surname, String sex, double height, double weight, String day, String month, String year) {
 
         //Tratando dia informado, caso seja informado um digito
         //Verifica quantidade de caracteres
@@ -19,7 +19,6 @@ public class Person {
             //se for igual a 1, adiciona zero a esquerda
             day="0"+day;
         }
-        this.day = day;
 
         //Tratando mês informado, caso seja informado um digito
         //Verifica quantidade de caracteres
@@ -27,9 +26,15 @@ public class Person {
             //se for igual a 1, adiciona zero a esquerda
             month = "0"+month;
         }
-        this.month = month;
 
+        this.name = name;
+        this.surname = surname;
+        this.day = day;
+        this.month = month;
         this.year = year;
+        this.sex = sex;
+        this.height = height;
+        this.weight = weight;
     }
 
     public int age(){
@@ -84,13 +89,39 @@ public class Person {
         this.year = year;
     }
 
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
     @Override
     public String toString() {
         return
                 "Nome= " + name + '\n' +
                 "Sobrenome= " + surname + '\n' +
                 "Data de nascimento= " + day +"/" + month +"/" + year +'\n'+
-                "Idade= "+ age() +" Anos"+'\n';
+                "Idade= "+ age() +" Anos"+'\n'+
+                "Altura= "+ height +'\n'+
+                "Peso= "+weight+'\n';
     }
 
 }

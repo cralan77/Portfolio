@@ -1,4 +1,4 @@
-public class HeartRates {
+public class Calculator {
 
     //Frequencia cardiaca Maxima
     public static int maxHeartRates(Person person){
@@ -18,7 +18,15 @@ public class HeartRates {
         double targetMax = maxHeartRates*0.85;
 
         //Retorno da String contendo intervalo alvo
-        return targetMin + " e " + targetMax;
+        return targetMin + " bpm e " + targetMax + " bpm";
+    }
+
+    //Indice de massa corporal - IMC
+    public static double imc(Person person){
+        //Formula IMC Peso dividido pela altura ao quadrado
+
+        return person.getWeight()/Math.pow(person.getHeight(), 2);
+
     }
 
 }
