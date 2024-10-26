@@ -16,6 +16,7 @@ public class RatingIMC {
             return "Obesidade grau III";
         }
 
+        // Dados obtidos de: https://www.tuasaude.com/calculadora/imc/
 
     }
 }
