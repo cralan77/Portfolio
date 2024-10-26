@@ -21,8 +21,12 @@ public class Application {
         System.out.print("Ano de nascimento: ");
         String year = sc.nextLine();
 
-        HeartRates heartRates = new HeartRates(name, surname, day, month, year);
+        Person person = new Person(name, surname, day, month, year);
 
-        System.out.print(heartRates);
+        System.out.println(person);
+        System.out.println("Frequencia cardiaca máxima= "+HeartRates.maxHeartRates(person)+" bpm");
+        System.out.println("Frequencia cardiaca alvo, intervalo entre= "+ HeartRates.targetHeartRates(person));
+        System.out.println("\nSempre consulte um médico ou profissional de saúde qualificado antes de começar ou modificar um programa de exercícios físicos.");
+
     }
 }
